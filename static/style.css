@@ -3215,19 +3215,25 @@
      align-content: flex-start;
    }
    #hd{
-    background-image: url(https://images.squarespace-cdn.com/content/v1/5edded8f723faa2b0d84a17d/51ab9191-7059-4d85-8c9d-c5f12323255c/8.jpg?format=2500w);
+    background-image: url('/static/w9.jpg');
     width: 100%;
     background-position: 50% 50%;
     background-size: cover;
    }
    #hdA{
-    background-image: url(https://images.squarespace-cdn.com/content/v1/5edded8f723faa2b0d84a17d/1618359301255-9LLBGFSG0FGV8P8U2RR9/_CM27715.JPG?format=1500w);
+    background-image: url('/static/bio.jpg');
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+   }
+   #hdC{
+    background-image: url('/static/w17.jpg');
     width: 100%;
     background-position: 50% 50%;
     background-size: cover;
    }
    #hdF{
-    background-image: url(https://images.squarespace-cdn.com/content/v1/5edded8f723faa2b0d84a17d/741ff029-b55d-45c0-8bce-46d13514c909/MaddieTreyTeaserThumbnailFacebook.jpg?format=1500w);
+    background-image: url('/static/w6.jpg');
     width: 100%;
     background-position: 50% 50%;
     background-size: cover;
@@ -3350,19 +3356,19 @@
     }
     
    #hd1{
-    background-image: url(https://images.squarespace-cdn.com/content/v1/5edded8f723faa2b0d84a17d/5697aeb4-e816-4288-8612-3fc89dfa945e/2.jpg);
+    background-image: url('/static/w14.jpg');
     width: 100%;
     background-position: 50% 50%;
     background-size: cover;
    }
    #hd2{
-    background-image: url(https://images.squarespace-cdn.com/content/v1/5edded8f723faa2b0d84a17d/1618359301255-9LLBGFSG0FGV8P8U2RR9/_CM27715.JPG?format=1500w);
+    background-image: url('/static/w6.jpg');
     width: 100%;
     background-position: 50% 50%;
     background-size: cover;
    }
    #hd3{
-    background-image: url(https://images.squarespace-cdn.com/content/v1/5edded8f723faa2b0d84a17d/f739347f-2319-42d3-9c54-c1e0b129d510/1.jpg?format=1500w);
+    background-image: url('/static/w12.jpg');
     width: 100%;
     background-position: 50% 50%;
     background-size: cover;

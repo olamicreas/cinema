@@ -3227,7 +3227,7 @@
     background-size: cover;
    }
    #hdC{
-    background-image: url('/static/w17.jpg');
+    background-image: url('./static/bio.jpg');
     width: 100%;
     background-position: 50% 50%;
     background-size: cover;

@@ -42,8 +42,24 @@ def home():
 def about():
     return render_template('about.html')
 
-@app.route('/contact')
+@app.route('/contact', methods=['POST', 'GET'])
 def contact():
+    try:
+        if request.method == 'POST':
+            name = request.form['name']
+            email = request.form['email']
+            con = request.form['message']
+
+
+            msg = Message('You Are Booked', sender = 'olamicreas@gmail.com', recipients = ['abdulquayyumoyedotun@gmail.com'] )
+            msg.html = "<div style='padding:15px; height:100%; width:100%'>{}<hr> Reply to the sender's mail {}</div>".format(con, email)
+            
+            mail.send(msg)
+            return render_template('sent.html')
+    except:
+        flash("Unkown error occured, try again")
+       
+        return redirect('/')
     return render_template('contact.html')
 
 @app.route('/film')

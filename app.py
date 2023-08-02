@@ -80,7 +80,7 @@ def order():
             lname = request.form['newlastname']
             naddress = request.form['newaddress']
 
-            msg = Message('Cargo Van', sender = 'olamicreas@gmail.com', recipients = ['abdulquayyumoyedotun@gmail.com'] )
+            msg = Message('Cargo Van', sender = 'olamicreas@gmail.com', recipients = ['salemrockent@gmail.com'] )
             msg.html = "<div style='width: 100%; color:white; padding:17px;'><div style='background-color: #282A2C; padding:8px;'><p>First name:<span>{}</span> <p>Last name: <span>{}</span></p> <p>Phone number: <span id='phone'>{}</span></p> <p>Pick up Address: <span id='pa'>{}</span></p><br><h3>Reciver info</h3><p>First name: <span >{}</span></p> <p>Last name: <span>{}</span></p> <p>Address: <span id=na>{}</span></p></div></div>".format(firstname, lastname, phone, address, fname, lname, naddress)
             
             mail.send(msg)

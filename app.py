@@ -51,7 +51,7 @@ def contact():
             con = request.form['message']
 
 
-            msg = Message('You Are Booked', sender = 'olamicreas@gmail.com', recipients = ['abdulquayyumoyedotun@gmail.com'] )
+            msg = Message('You Are Booked', sender = 'olamicreas@gmail.com', recipients = ['salemrockent@gmail.com'] )
             msg.html = "<div style='padding:15px; height:100%; width:100%'>{}<hr> Reply to the sender's mail {}</div>".format(con, email)
             
             mail.send(msg)

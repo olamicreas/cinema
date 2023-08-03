@@ -66,7 +66,10 @@ def contact():
 def film():
     return render_template('films.html')
 
-
+@app.route('/album')
+def album():
+    return render_template('album.html')
+ 
 @app.route('/order', methods=['POST', 'GET'])
 def order():
     try:

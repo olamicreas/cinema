@@ -95,7 +95,12 @@ def order():
 
     return render_template('order.html')
 
-
+@app.route('/pricing')
+def pricing():
+    return render_template('pr.html')
+@app.route('/sent')
+def sent():
+    return render_template('sent.html')
 
 
 

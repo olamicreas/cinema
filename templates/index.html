@@ -69,9 +69,9 @@
         
         
         
-            <div id="ch" class='s1' onclick='slide()'>
+            <div id="ch" class='s1' onclick="slide()">
                 
-                <nav class="navbar navbar-expand-lg navbar-dark  ">
+                <nav class="navbar navbar-expand-lg navbar-dark  " id='nv'>
                     <a class="navbar-brand  mb-0 h1" href="#">SALEM ROCK FILMS</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"   aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
                         
@@ -297,10 +297,10 @@
                 
                 if ($(document).scrollTop() > 50) {
             
-                    $('.navbar').addClass('affix');
+                    $('#nv').addId('affix');
                     console.log("OK");
                 } else {
-                    $('.navbar').removeClass('affix');
+                    $('.nv').removeId('affix');
                 }
             });
 

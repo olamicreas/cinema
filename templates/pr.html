@@ -218,6 +218,51 @@
             margin-top: 25px;
         }
     }
+	    
+table {
+  max-width: 960px;
+  margin: 10px auto;
+}
+
+caption {
+  font-size: 1.6em;
+  font-weight: 400;
+  padding: 10px 0;
+}
+
+thead th {
+  font-weight: 400;
+  background: #8a97a0;
+  color: #FFF;
+}
+
+tr {
+  background: #f4f7f8;
+  border-bottom: 1px solid #FFF;
+  margin-bottom: 5px;
+}
+
+tr:nth-child(even) {
+  background: #e8eeef;
+}
+
+th, td {
+  text-align: left;
+  padding: 20px;
+  font-weight: 300;
+}
+
+tfoot tr {
+  background: none;
+}
+
+tfoot td {
+  padding: 10px 2px;
+  font-size: 0.8em;
+  font-style: italic;
+  color: #8a97a0;
+}
+
     /* Responsiveness:End */
     </style>
     <body>
@@ -276,7 +321,45 @@
                 </div>
                
         </div>
-            
+        <div style="justify-content: center; text-align: center; padding: 15px;">
+            <table>
+                <caption>Available dates of booking for 2023</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Month</th>
+                    <th scope="col">Day</th>
+                    <th scope="col">Time</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <td colspan="3">Data is updated every minutes.</td>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <th scope="row">January</th>
+                    <td>1st - 30th</td>
+                    <td>12am-12pm</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">March</th>
+                    <td>5th-20th</td>
+                    <td>12am-12pm</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">April</th>
+                    <td>4th-19th</td>
+                    <td>12am-12pm</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">December</th>
+                    <td>20th-30th</td>
+                    <td>12am-12pm</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
             <div class="">
                 
                 <section>

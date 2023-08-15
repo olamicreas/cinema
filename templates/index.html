@@ -69,47 +69,30 @@
         
         
         
-            <div id="ch" class='s1' onclick="slide()">
+            <div id="ch" class='s1'>
                 
-                <nav class="navbar navbar-expand-lg navbar-dark  nv">
-                    <a class="navbar-brand  mb-0 h1" href="#">SALEM ROCK FILMS</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"   aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
-                        
-                        <span class="navbar-toggler-icon" ></span>
-                        
-                    </button>
-                    
-                    <div class="collapse navbar-collapse" id="navbarNav" >
-                        
-                    
-                        <ul class="navbar-nav ml-auto mb-2 mb-lg-0 h4">
-                            
-                            <li class="nav-item active">
-                            <a class="nav-link" href="{{url_for('home')}}">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="{{url_for('film')}}">Films</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="{{url_for('about')}}">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{url_for('album')}}">Photos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{url_for('pricing')}}">Pricing</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{url_for('contact')}}">Contact</a>
-                            </li>
-                            
-                        
-                        </ul>
-                        
-                    
+               <nav class="nav">
+                <div class="container">
+                    <div class="logo">
+                        <a href="#">Salem Rock FIlms</a>
                     </div>
-                </nav>
-                <div class="intro-header">
+                    <div id="mainListDiv" class="main_list">
+                        <ul class="navlinks">
+                            <li><a href="{{url_for ('home')}}">Home</a></li>
+                            <li><a href="{{url_for ('film')}}">Films</a></li>
+                            <li><a href="{{url_for ('about')}}">About</a></li>
+                            <li><a href="{{url_for ('album')}}">Photos</a></li>
+                            <li><a href="{{url_for ('contact')}}">Contact</a></li>
+                        </ul>
+                    </div>
+                    <span class="navTrigger">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
+                </div>
+            </nav>
+                <div class="intro-header" onclick="slide()">
                     <div class="intro-content">
                         <div class="intro-text"  >
                             
@@ -124,7 +107,7 @@
                         
                     </div>
                 </div>
-                <a class="carousel-control-next btn-lg" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <a class="carousel-control-next btn btn-lg" href="#carouselExampleIndicators" role="button" data-slide="next" onclick="slide()">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
@@ -282,7 +265,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script>
-            var randslide = ['s2', 's1', 's', 's4', 's5']
+            var randslide = ['s2', 's1', 's3', 's4', 's5']
             function ran(){
                 
                 var x = randslide[ Math.floor(Math.random() * randslide.length)];
@@ -301,10 +284,10 @@
                 
                 if ($(document).scrollTop() > 50) {
             
-                    $('.nv').addClass('affix');
+                    $('.nav').addClass('affix');
                     console.log("OK");
                 } else {
-                    $('.nv').removeClass('affix');
+                    $('.nav').removeClass('affix');
                 }
             });
 

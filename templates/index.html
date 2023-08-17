@@ -97,7 +97,28 @@ font-family: 'Source Serif Pro', serif;
 }
 
 /*------------------------------- vertical carousel indicators ------------------------------*/
-
+.carousel-indicators{
+    position:absolute;
+    top:0;
+    bottom:0;
+    margin:auto;
+    height:20px;
+    right:10px; left:auto;
+    width:auto;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.carousel-indicators li{
+    display:block; margin-bottom:5px; border:1px solid #00a199; 
+    
+}
+.carousel-indicators li.active{
+    margin-bottom:5px; background:#00a199;
+    
+}
     </style>
     <body>
         

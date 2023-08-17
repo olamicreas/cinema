@@ -156,9 +156,10 @@ font-family: 'Source Serif Pro', serif;
 	      <li data-target="#indicators" data-slide-to="1"></li>
 	      <li data-target="#indicators" data-slide-to="2"></li>
 	    </ol>
-	    <div class="carousel-inner swiper-container" role="listbox">
+	    <div class='swiper-container'>
+	    <div class="carousel-inner swiper-wrapper" role="listbox">
 	      <!-- Slide One - Set the background image for this slide in the line below -->
-	      <div class="carousel-item active" style=" background-image: url('/static/w1.jpg');" >
+	      <div class="carousel-item active swiper-slide" style=" background-image: url('/static/w1.jpg');" >
 	                
 	                <div class="intro-header">
 	                    <div class="intro-content">
@@ -407,94 +408,15 @@ font-family: 'Source Serif Pro', serif;
 	                $(this).off("touchmove");
 	            });
 	        });
-            const interleaveOffset = 0.75;
-
-            var swiper = new Swiper('.swiper-container', {
-            direction: 'vertical',
-            speed: 800,
-            mousewheelControl: true,
-            watchSlidesProgress: true,
-            mousewheel: {
-                releaseOnEdges: true,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: false,
-                type: 'bullets',
-                renderBullet: function (index, className) {
-                return '<span class="' + className + '">' + ('0' + (index + 1)) + '</span>';
-                }
-            },
-            on: {
-                progress: function() {
-                console.log('test')
-                let swiper = this;
-
-                for (let i = 0; i < swiper.slides.length; i++) {
-                    let slideProgress = swiper.slides[i].progress;
-                    let innerOffset = swiper.height * interleaveOffset;
-                    let innerTranslate = slideProgress * innerOffset;
-
-                    TweenMax.set(swiper.slides[i].querySelector(".slide-inner"), {
-                    y: innerTranslate,
-                    });
-                }
-                },
-                setTransition: function(slider, speed) {
-                let swiper = this;
-                for (let i = 0; i < swiper.slides.length; i++) {
-                    swiper.slides[i].style.transition = speed + "ms";
-                    swiper.slides[i].querySelector(".slide-inner").style.transition =
-                    speed + "ms";
-                }
-                }
-            }
-            });
-
-            // Инициализация превью слайдера
-            const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', { // ищем слайдер превью по селектору
-                // задаем параметры
-                direction: 'vertical', // вертикальная прокрутка
-                slidesPerView: 3, // показывать по 3 превью
-                spaceBetween: 24, // расстояние между слайдами
-                navigation: { // задаем кнопки навигации
-                    nextEl: '.slider__next', // кнопка Next
-                    prevEl: '.slider__prev' // кнопка Prev
-                },
-                freeMode: true, // при перетаскивании превью ведет себя как при скролле
-                breakpoints: { // условия для разных размеров окна браузера
-                    0: { // при 0px и выше
-                        direction: 'horizontal', // горизонтальная прокрутка
-                    },
-                    768: { // при 768px и выше
-                        direction: 'vertical', // вертикальная прокрутка
-                    }
-                }
-            });
-            // Инициализация слайдера изображений
-            const sliderImages = new Swiper('.slider__images .swiper-container', { // ищем слайдер превью по селектору
-                // задаем параметры
-                direction: 'vertical', // вертикальная прокрутка
-                slidesPerView: 1, // показывать по 1 изображению
-                spaceBetween: 32, // расстояние между слайдами
-                mousewheel: true, // можно прокручивать изображения колёсиком мыши
-                navigation: { // задаем кнопки навигации
-                    nextEl: '.slider__next', // кнопка Next
-                    prevEl: '.slider__prev' // кнопка Prev
-                },
-                grabCursor: true, // менять иконку курсора
-                thumbs: { // указываем на превью слайдер
-                    swiper: sliderThumbs // указываем имя превью слайдера
-                },
-                breakpoints: { // условия для разных размеров окна браузера
-                    0: { // при 0px и выше
-                        direction: 'horizontal', // горизонтальная прокрутка
-                    },
-                    768: { // при 768px и выше
-                        direction: 'vertical', // вертикальная прокрутка
-                    }
-                }
-            });
+		var swiper = new Swiper('.swiper-container', {
+		  direction: 'vertical',
+		  slidesPerView: 1,
+		  mousewheel: true,
+		  pagination: {
+		    el: '.swiper-pagination',
+		    clickable: true,
+		  },
+		});
         </script>
         <script>
             $(window).scroll(function() {

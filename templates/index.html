@@ -63,21 +63,23 @@
         
         
         
-        <nav  id ="mainNavbar" class ="navbar navbar-dark  navbar-expand-md py-0 fixed-top">
+        <nav  id ="mainNavbar" class ="navbar navbar-dark  navbar-expand-md py-0 ">
             <nav class="nav">
                 <div class="container">
                     <div class="logo">
-                        <a href="#">Your Logo</a>
+                        <a href="#">Salem Rock Films</a>
                     </div>
                     <div id="mainListDiv" class="main_list">
                         <ul class="navlinks">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="{{url_for('about')}}">About</a></li>
+                            <li><a href="{{url_for('album')}}">Album</a></li>
+                            <li><a href="{{url_for('pricing')}}">Pricing</a></li>
+				<li><a href="{{url_for('film')}}">Film</a></li>
+                            <li><a href="{{url_for('contact')}}">Contact</a></li>
                         </ul>
                     </div>
-                    <span class="navTrigger">
+			<br>
+                    <span class="navTrigger" style="margin-top: 10px;">
                         <i></i>
                         <i></i>
                         <i></i>

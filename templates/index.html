@@ -69,7 +69,7 @@
         
         
         
-            <div id="ch" class='s1'>
+            <nav  id ="mainNavbar" class ="navbar navbar-dark  navbar-expand-md py-0 fixed-top">
                 
             <nav class="nav">
                 <div class="container">
@@ -94,10 +94,22 @@
                 
                 </div>
             </nav>
+            </nav>
             <section class="home">
                
             </section>
-                <div class="intro-header">
+             
+        <header>
+          <div id="indicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#indicators" data-slide-to="0" class="active"></li>
+              <li data-target="#indicators" data-slide-to="1"></li>
+              <li data-target="#indicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <!-- Slide One - Set the background image for this slide in the line below -->
+              <div class="carousel-item active" id="s1">
+                 <div class="intro-header">
                     <div class="intro-content">
                         <div class="intro-text"  >
                             
@@ -112,12 +124,65 @@
                         
                     </div>
                 </div>
-               <a class="carousel-control-prev" data-slide="prev" role='button' onclick="slide()">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previuos</span>
-                </a>
-               
+              </div>
+              <!-- Slide Two - Set the background image for this slide in the line below -->
+              <div class="carousel-item " id="s2">
+                 <div class="intro-header">
+                    <div class="intro-content">
+                        <div class="intro-text"  >
+                            
+                            <div style="margin-top: 28%; color: white;font-family: 'DroidSerif';font-size: 40px;">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h1 style="color: white;font-family: 'DroidSerif';font-size: 60px;">Let us tell your <br>STORY</h1>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+              </div>
+              <!-- Slide Three - Set the background image for this slide in the line below -->
+            <div class="carousel-item " id="s3">
+                 <div class="intro-header">
+                    <div class="intro-content">
+                        <div class="intro-text"  >
+                            
+                            <div style="margin-top: 28%; color: white;font-family: 'DroidSerif';font-size: 40px;">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h1 style="color: white;font-family: 'DroidSerif';font-size: 60px;">Let us tell your <br>STORY</h1>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+              </div>
             </div>
+            <a class="carousel-control-prev" href="#indicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+            <a class="carousel-control-next" href="#indicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+          </div>
+        </header>
+        
+       
+        <script>
+                $(function () {
+                    $(document).scroll(function () {
+                        var $nav = $("#mainNavbar");
+                        $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+                    });
+                });
+        </script> 
+              
         
             <div class="container">
                 <div class="main-heading-wrap">

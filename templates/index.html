@@ -2,7 +2,7 @@
 
 <html>
     <head>
-	<meta charset="utf-8"/>
+        <meta charset="utf-8"/>
         <title>Home</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css"/>
@@ -14,54 +14,23 @@
        
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+        <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
 
-    	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     </head>
     <style>
-       #s1{
-            background-image: url('/static/w1.jpg');
-            width: 100%;
-            background-position: 50% 50%;
-            background-size: cover;
-       }
-        .s2{
-            background-image: url('/static/w3.jpg');
-            width: 100%;
-            background-position: 50% 50%;
-            background-size: cover;
-       }
-        .s3{
-            background-image: url('/static/w7.jpg');
-            width: 100%;
-            background-position: 50% 50%;
-            background-size: cover;
-       }
-        .s4{
-            background-image: url('/static/w8.jpg');
-            width: 100%;
-            background-position: 50% 50%;
-            background-size: cover;
-       }
-        .s5{
-            background-image: url('/static/w4.jpg');
-            width: 100%;
-            background-position: 50% 50%;
-            background-size: cover;
-       }
-        .affix {
-            padding: 0;
-            background-color: #111;
-        }
-	.carousel-item {
-	  height: 65vh;
-	  min-height: 350px;
-	  background: no-repeat center center scroll;
-	  -webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover;
-}
+        .carousel-item {
+        height: 65vh;
+        min-height: 350px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
 
 #mainNavbar{
 	padding-left:  50px;
@@ -101,7 +70,8 @@ font-family: 'Source Serif Pro', serif;
     <body>
         
         
-         <nav  id ="mainNavbar" class ="navbar navbar-dark  navbar-expand-md py-0 fixed-top">
+        
+        <nav  id ="mainNavbar" class ="navbar navbar-dark  navbar-expand-md py-0 fixed-top">
             <nav class="nav">
                 <div class="container">
                     <div class="logo">
@@ -109,11 +79,10 @@ font-family: 'Source Serif Pro', serif;
                     </div>
                     <div id="mainListDiv" class="main_list">
                         <ul class="navlinks">
-                            <li><a href="{{url_for('about')}}">About</a></li>
-                            <li><a href="{{url_for('album')}}">Album</a></li>
-                            <li><a href="{{url_for('pricing')}}">Pricing</a></li>
-				<li><a href="{{url_for('film')}}">Film</a></li>
-                            <li><a href="{{url_for('contact')}}">Contact</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </div>
                     <span class="navTrigger">
@@ -124,10 +93,8 @@ font-family: 'Source Serif Pro', serif;
                 </div>
             </nav>    
         </nav>
-                   
         
-        
-<header>
+       <header>
   <div id="indicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#indicators" data-slide-to="0" class="active"></li>
@@ -155,7 +122,7 @@ font-family: 'Source Serif Pro', serif;
                 
         </div>
       <!-- Slide Two - Set the background image for this slide in the line below -->
-      <div class="carousel-item"  style=" background-image: url('/static/w2.jpg');")">
+      <div class="carousel-item s2">
         <div class="intro-header">
                     <div class="intro-content">
                         <div class="intro-text">
@@ -171,7 +138,7 @@ font-family: 'Source Serif Pro', serif;
                 </div>
       </div>
       <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item"  style=" background-image: url('/static/w3.jpg');">
+      <div class="carousel-item s3"  >
       
         <div class="intro-header">
                     <div class="intro-content">
@@ -197,25 +164,22 @@ font-family: 'Source Serif Pro', serif;
         </a>
   </div>
 </header>
-
-<!-- Page Content -->
-
-
-<script>
-        $(function () {
-            $(document).scroll(function () {
-                var $nav = $("#mainNavbar");
-                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
-            });
-        });
-</script>
-
         
-            <div class="container">
+       
+        <script>
+                $(function () {
+                    $(document).scroll(function () {
+                        var $nav = $("#mainNavbar");
+                        $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+                    });
+                });
+            </script>
+        
+            <div class="container" style="margin-top: 10px;">
                 <div class="main-heading-wrap">
                     <h1>Short Story About Us</h1>
                     <div class="paragraph-bigger cc-bigger-light">
-                        SALEM ROCK FILM PRODUCTIONS LLC offers the best service you won't regret choosing us<br/>
+                        SALEEM ROCK FILM PRODUCTIONs LLC offers the best service you won't regret choosing us<br/>
                     </div>
                 </div>
                 <div class="divider"></div>
@@ -296,7 +260,12 @@ font-family: 'Source Serif Pro', serif;
                         <input type="email" class="text-field cc-subscribe-text-field w-input" maxlength="256" name="Newsletter-Email" data-name="Newsletter Email" placeholder="Enter your email" id="Newsletter-Email" required=""/>
                         <input type="submit" value="Submit" data-wait="Please wait..." class="button w-button"/>
                     </form>
-                    
+                    <div class="status-message w-form-done">
+                        <div>Thank you! Your submission has been received!</div>
+                    </div>
+                    <div class="status-message w-form-fail">
+                        <div>Oops! Something went wrong while submitting the form.</div>
+                    </div>
                 </div>
             </div>
         </div>

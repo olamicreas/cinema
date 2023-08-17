@@ -66,7 +66,38 @@ font-family: 'Source Serif Pro', serif;
 }
 
 
+    .carousel-inner,.carousel,.carousel-item,.container,.fill {
+    height:100%;
+    min-height:400px;
+    width:100%;
+    background-position:center center;
+    background-size:cover;
+}
+.slide-wrapper{display:inline;}
+.slide-wrapper .container{padding:0;}
+
+
+/*------------------------------ vertical bootstrap slider----------------------------*/
+
+.carousel-inner> .carousel-item.carousel-item-next ,
+.carousel-inner > .carousel-item.active.carousel-item-right{ 
+    transform: translate3d(0, 100%, 0); -webkit-transform: translate3d(0, 100%, 0); -ms-transform: translate3d(0, 100%, 0); -moz-transform: translate3d(0, 100%, 0); -o-transform: translate3d(0, 100%, 0);  top: 0;
     
+}
+.carousel-inner > .carousel-item.carousel-item-prev ,
+.carousel-inner > .carousel-item.active.carousel-item-left{ 
+    transform: translate3d(0,-100%, 0); -webkit-transform: translate3d(0,-100%, 0);  -moz-transform: translate3d(0,-100%, 0);-ms-transform: translate3d(0,-100%, 0); -o-transform: translate3d(0,-100%, 0); top: 0;
+    
+}
+.carousel-inner > .carousel-item.next.carousel-item-left ,
+.carousel-inner > .carousel-item.carousel-item-prev.carousel-item-right ,
+.carousel-inner > .carousel-item.active{
+    transform:translate3d(0,0,0); -webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);; -moz-transform:translate3d(0,0,0); -o-transform:translate3d(0,0,0); top:0;
+    
+}
+
+/*------------------------------- vertical carousel indicators ------------------------------*/
+
     </style>
     <body>
         
@@ -329,6 +360,30 @@ font-family: 'Source Serif Pro', serif;
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
         <script>
+		
+	$('#myCarousel').carousel({
+	            interval: false
+	        });
+	
+	        //scroll slides on swipe for touch enabled devices
+	
+	        $("#myCarousel").on("touchstart", function(event){
+	
+	            var yClick = event.originalEvent.touches[0].pageY;
+	            $(this).one("touchmove", function(event){
+	
+	                var yMove = event.originalEvent.touches[0].pageY;
+	                if( Math.floor(yClick - yMove) > 1 ){
+	                    $(".carousel").carousel('next');
+	                }
+	                else if( Math.floor(yClick - yMove) < -1 ){
+	                    $(".carousel").carousel('prev');
+	                }
+	            });
+	            $(".carousel").on("touchend", function(){
+	                $(this).off("touchmove");
+	            });
+	        });
             const interleaveOffset = 0.75;
 
             var swiper = new Swiper('.swiper-container', {

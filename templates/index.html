@@ -66,60 +66,65 @@ font-family: 'Source Serif Pro', serif;
 	font-family: 'Source Serif Pro', serif;
 }
 
+.slider {
+           height: 100%;
+        
+            
+        }
+       
+        #ssli{
+            background-position: 50% 50%;
+            background-size: cover;
 
-    .carousel-inner,.carousel,.carousel-item,.container,.fill {
-    height:100%;
-    min-height:400px;
-    width:100%;
-    background-position:center center;
-    background-size:cover;
-}
-.slide-wrapper{display:inline;}
-.slide-wrapper .container{padding:0;}
+            
+        }
+          
+        .slick-slide {
+            background: #3a8999;
+            color: white;
+            padding: 20px 0;
+            font-size: 30px;
+            font-family: "Arial", "Helvetica", sans-serif;
+            text-align: center; 
+            width: 100%;
+           
+            background-position: 50% 50%;
+            background-size: cover;
+            min-height: 500px;
+            
+
+            
+            
+        
+           
+           
+            
+        
+        }
+        
+        
 
 
-/*------------------------------ vertical bootstrap slider----------------------------*/
+            .slick-prev::before,
+            .slick-next::before {
+            color: black;
+            width: 100%;
+            
+        }
 
-.carousel-inner> .carousel-item.carousel-item-next ,
-.carousel-inner > .carousel-item.active.carousel-item-right{ 
-    transform: translate3d(0, 100%, 0); -webkit-transform: translate3d(0, 100%, 0); -ms-transform: translate3d(0, 100%, 0); -moz-transform: translate3d(0, 100%, 0); -o-transform: translate3d(0, 100%, 0);  top: 0;
-    
-}
-.carousel-inner > .carousel-item.carousel-item-prev ,
-.carousel-inner > .carousel-item.active.carousel-item-left{ 
-    transform: translate3d(0,-100%, 0); -webkit-transform: translate3d(0,-100%, 0);  -moz-transform: translate3d(0,-100%, 0);-ms-transform: translate3d(0,-100%, 0); -o-transform: translate3d(0,-100%, 0); top: 0;
-    
-}
-.carousel-inner > .carousel-item.next.carousel-item-left ,
-.carousel-inner > .carousel-item.carousel-item-prev.carousel-item-right ,
-.carousel-inner > .carousel-item.active{
-    transform:translate3d(0,0,0); -webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);; -moz-transform:translate3d(0,0,0); -o-transform:translate3d(0,0,0); top:0;
-    
-}
+            .slick-slide:nth-child(odd) {
+            background: #e84a69; 
+            width: 100%;
+            
+            
+        }
+        
 
-/*------------------------------- vertical carousel indicators ------------------------------*/
-.carousel-indicators{
-    position:absolute;
-    top:0;
-    bottom:0;
-    margin:auto;
-    height:20px;
-    right:10px; left:auto;
-    width:auto;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-.carousel-indicators li{
-    display:block; margin-bottom:5px; border:1px solid #00a199; 
-    
-}
-.carousel-indicators li.active{
-    margin-bottom:5px; background:#00a199;
-    
-}
+        .fs {
+            width: 100%;
+        }
+
+  
     </style>
     <body>
         
@@ -149,78 +154,31 @@ font-family: 'Source Serif Pro', serif;
             </nav>    
         </nav>
         
-	<header>
-	  <div id="indicators" class="carousel slide " data-ride="carousel">
-	    <ol class="carousel-indicators">
-	      <li data-target="#indicators" data-slide-to="0" class="active"></li>
-	      <li data-target="#indicators" data-slide-to="1"></li>
-	      <li data-target="#indicators" data-slide-to="2"></li>
-	    </ol>
-	    
-	    <div class="carousel-inner" role="listbox">
-	      <!-- Slide One - Set the background image for this slide in the line below -->
-	      <div class="carousel-item active swiper-container" style=" background-image: url('/static/w1.jpg');" >
-	                
-	                <div class="intro-header">
-	                    <div class="intro-content">
-	                        <div class="intro-text">
-	                            
-	                            <div style=" color: white">
-	                                
-	                                    <h1 >Let's Tell Your Story</h1>
-	                                
-	                            </div>
-	                        </div>
-	                        
-	                    </div>
-	                </div>
-	               
-	                
-	        </div>
-	      <!-- Slide Two - Set the background image for this slide in the line below -->
-	      <div class="carousel-item " style=" background-image: url('/static/w2.jpg');">
-	        <div class="intro-header">
-	                    <div class="intro-content">
-	                        <div class="intro-text">
-	                            
-	                            <div style=" color: white">
-	                                
-	                                    <h1 >In a cinematic way....</h1>
-	                                
-	                            </div>
-	                        </div>
-	                        
-	                    </div>
-	                </div>
-	      </div>
-	      <!-- Slide Three - Set the background image for this slide in the line below -->
-	      <div class="carousel-item " style=" background-image: url('/static/w3.jpg');"  >
-	      
-	        <div class="intro-header">
-	                    <div class="intro-content">
-	                        <div class="intro-text">
-	                            
-	                            <div style=" color: white">
-	                                
-	                                    <h1 >..You'll never forget</h1>
-	                                
-	                            </div>
-	                        </div>
-	                        
-	                    </div>
-	                </div>
-	      </div>
-	    </div>
-	    <a class="carousel-control-prev" href="#indicators" role="button" data-slide="prev">
-	         <i class='far fa-arrow-alt-circle-left btn btn-outline-success  btn-lg'></i>
-	         
-	        </a>
-	    <a class="carousel-control-next" href="#indicators" role="button" data-slide="next" >
-	        <i class='far fa-arrow-alt-circle-right btn btn-outline-success  btn-lg'></i>
-	        </a>
-	  </div>
-	</header>
-        
+	 <header>
+            <div class="slider" id="slider">
+                <div style="background-image: url('/static/w1.jpg'); " id="ssli">
+                    
+                    
+                  <p style="margin-top: 40%;">Let's tell your story...</p>
+                </div>
+                <div style="background-image: url('/static/w2.jpg');" id="ssli">
+                  
+                  <p style="margin-top: 40%;">..In a cinematic way</p>
+                </div>
+                <div style="background-image: url('/static/w8.jpg');" id="ssli">
+                  
+                  <p style="margin-top: 40%;">You won't ever forget</p>
+                </div>
+                <div style="background-image: url('/static/w6.jpg');" id="ssli">
+                 
+                  <p style="margin-top: 40%;">And we will never disappoint....</p>
+                </div>
+                <div style="background-image: url('/static/w5.jpg');" id="ssli">
+                 
+                  <p style="margin-top: 40%;">...in God we trust</p>
+                </div>
+              </div>
+        </header>
        
         <script>
                 $(function () {

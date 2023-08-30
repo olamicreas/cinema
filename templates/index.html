@@ -110,11 +110,12 @@
     
             <i class="menu__close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M24 22.568l-1.433 1.432-10.567-10.568-10.568 10.568-1.432-1.432 10.568-10.568-10.568-10.568 1.432-1.432 10.568 10.567 10.567-10.567 1.433 1.432-10.568 10.568 10.568 10.568z"></path></svg></i>
     
-            <menu class="menu__content">
-                <a class="menu__item menu__item_work" href="/#work" tabindex="-1">Work</a>
-                <a class="menu__item menu__item_clients" href="/clients" tabindex="-1">Clients</a>
-                <a class="menu__item menu__item_about" href="/overview" tabindex="-1">About</a>
-                <a class="menu__item menu__item_contact" href="/contact" tabindex="-1">Contact</a>
+           <menu class="menu__content">
+                <a class="menu__item menu__item_work" href="{{url_for('about')}}" tabindex="-1">About</a>
+                <a class="menu__item menu__item_clients" href="{{url_for('album')}}" tabindex="-1">Album</a>
+                <a class="menu__item menu__item_about" href="{{url_for('pricing')}}" tabindex="-1">Pricing</a>
+                <a class="menu__item menu__item_contact" href="{{url_for('film')}}" tabindex="-1">Film</a>
+                <a class="menu__item menu__item_contact" href="{{url_for('contact')}}" tabindex="-1">Contact</a>
             </menu>
     
             <footer class="menu__footer">

@@ -1,88 +1,46 @@
 <!DOCTYPE html>
-
+<!-- This site was created in Webflow. https://www.webflow.com -->
+<!-- Last Published: Mon Oct 18 2021 18:56:04 GMT+0000 (Coordinated Universal Time) -->
 <html>
     <head>
         <meta charset="utf-8"/>
         <title>Home</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="x/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css"/>
-	    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-        <link href="https://fonts.googleapis.com" rel="preconnect"/>
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
+        <link href="l="preconnect"/>
+        <link href="preconnect" crossorigin="anonymous"/>
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-        
+        <script src="{{url_for('static', filename='myjs.js')}}" type="text/javascript"></script>
         
        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="tstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+      href="per/swiper-bundle.min.css"
     />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-	<link
-	    rel="stylesheet"
-	    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
-	    integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
-	    crossorigin="anonymous"
-	    referrerpolicy="no-referrer"
-	  />
-	
-	  <!-- ✅ Load slick theme CSS ✅ -->
-	  <link
-	    rel="stylesheet"
-	    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-	    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-	    crossorigin="anonymous"
-	    referrerpolicy="no-referrer"
-	  />
+    <link
+    rel="stylesheet"
+    href="x/libs/slick-carousel/1.8.1/slick.css"
+    integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- ✅ Load slick theme CSS ✅ -->
+  <link
+    rel="stylesheet"
+    href="x/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
     </head>
     <style>
-        .carousel-item {
-        height: 65vh;
-        min-height: 355px;
-        background: no-repeat center center scroll;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-
-#mainNavbar{
-	
-	margin-top: 30px;
-}
-
-.navbar-dark .navbar-brand{
-font-family: 'Source Serif Pro', serif;
-
-}
-
-.navbar-nav .nav-link{
-	font-family: 'Source Serif Pro', serif;
-
-}
-
-.display-4{
-	font-family: 'Source Serif Pro', serif;
-}
-
-.lead{
-	font-family: 'Source Serif Pro', serif;
-}
-
-.navbar.scrolled {
-    background: rgb(34, 31, 31);
-    transition: background 500ms;
-}
-
-.font-weight-light{
-	font-family: 'Source Serif Pro', serif;
-}
-
-.slider {
+      
+        .slider {
            height: 100%;
         
             
@@ -140,70 +98,899 @@ font-family: 'Source Serif Pro', serif;
             width: 100%;
         }
 
-  
     </style>
     <body>
         
         
         
-        <nav  id ="mainNavbar" class ="navbar navbar-dark navbar-expand-md fixed-top">
-            <nav class="nav">
-                <div class="container">
-                    <div class="logo">
-                        <a href="#" >Salem Rock Films</a>
-                    </div>
-                    <div id="mainListDiv" class="main_list">
-                         <ul class="navlinks">
-                            <li><a href="{{url_for('about')}}">About</a></li>
-                            <li><a href="{{url_for('album')}}">Album</a></li>
-                            <li><a href="{{url_for('pricing')}}">Pricing</a></li>
-				<li><a href="{{url_for('film')}}">Film</a></li>
-                            <li><a href="{{url_for('contact')}}">Contact</a></li>
+        <div class="page" id="root">
+            <!-- UI -->
+            <a class="ui-logo " href="" style="font-size: larger; width: 50%; font-weight: bold; color: black;">SALEM ROCK FILMS</a>
+            <span class="ui-menu"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="40" viewBox="0 0 80 40"><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M0 40v-40h80v40h-80zm31.014-24.986h-3.587l-1.315 4.803c-.18.691-.599 2.501-.599 2.501h-.029s-.419-1.81-.613-2.501l-1.3-4.803h-3.559v10.972h2.377v-5.509c0-.445-.045-2.21-.045-2.21h.03s.374 1.657.493 2.057l1.524 5.662h2.183l1.54-5.678c.119-.399.493-2.041.493-2.041h.029s-.044 1.75-.044 2.194v5.524h2.421v-10.971zm8.984 8.672h-5.408v-2.349h4.562v-2.118h-4.562v-1.964h5.321v-2.241h-7.901v10.972h7.988v-2.3zm10.014-8.672h-2.548v5.203c0 .383.029 1.703.029 1.703h-.029l-.722-1.396-3.122-5.509h-2.621v10.972h2.548v-5.11c0-.384-.029-1.795-.029-1.795h.029s.574 1.182.751 1.473l3.093 5.432h2.621v-10.973zm9.989 0h-2.661v7.029c0 1.057-.586 1.811-1.819 1.811-1.308 0-1.849-.709-1.849-1.765v-7.075h-2.661v6.984c0 2.52 1.504 3.998 4.51 3.998 2.992 0 4.48-1.509 4.48-3.998v-6.984z"></path></svg></span>
+            
+        <div class="menu__overlay"></div>
+    
+        <nav class="menu">
+    
+            <i class="menu__close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M24 22.568l-1.433 1.432-10.567-10.568-10.568 10.568-1.432-1.432 10.568-10.568-10.568-10.568 1.432-1.432 10.568 10.567 10.567-10.567 1.433 1.432-10.568 10.568 10.568 10.568z"></path></svg></i>
+    
+            <menu class="menu__content">
+                <a href="{{url_for('about')}}">About</a></li>
+                <a href="{{url_for('album')}}">Album</a></li>
+                <a href="{{url_for('pricing')}}">Pricing</a></li>
+				<a href="{{url_for('film')}}">Film</a></li>
+                <a href="{{url_for('contact')}}">Contact</a></li>
+            </menu>
+    
+            <footer class="menu__footer">
+                <form class="menu__search" action="/search" method="get">
+                    <input class="menu__search__field" type="text" placeholder="Search" name="q" tabindex="-1">
+                    <button class="menu__search__button" type="submit" tabindex="-1"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="30" viewBox="0 0 34 30"><path fill="#FFF" d="M24.082 11.248l-1.418 1.41 6.516 6.342h-25.18v-17.88h-2v19.88h27.137l-6.465 6.574 1.402 1.426 8.926-9z"></path></svg></button>
+                </form>
+                <div class="menu__networks">
+                        <a class="menu__networks__item" href="shiddesign/" target="_blank" tabindex="-1">Facebook</a>
+            <a class="menu__networks__item" href="" target="_blank" tabindex="-1">Twitter</a>
+            <a class="menu__networks__item" href="rashid_official/" target="_blank" tabindex="-1">Instagram</a>
+            <a class="menu__networks__item" href="UCiKPAjgterCJB3intnAL73w/videos" target="_blank" tabindex="-1">Youtube</a>
+                </div>
+            </footer>
+    
+        </nav>    
+        <div class="panel__overlay"></div><div class="panel" data-url="/projects/category.json" style="transform: translateX(0px);">
+            <div class="panel__content">
+                <div class="panel__content__list" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+                    
+                </div>
+            <div class="iScrollVerticalScrollbar iScrollLoneScrollbar" style="overflow: hidden;"><div class="iScrollIndicator" style="transition-duration: 0ms; display: none; height: 8px; transform: translate(0px, -8px) translateZ(0px); transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);"></div></div></div>
+            <div class="panel__title"></div>
+            <i class="panel__close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M24 22.568l-1.433 1.432-10.567-10.568-10.568 10.568-1.432-1.432 10.568-10.568-10.568-10.568 1.432-1.432 10.568 10.567 10.567-10.567 1.433 1.432-10.568 10.568 10.568 10.568z"></path></svg></i>
+        </div>    <noindex>
+            <div class="rotate">
+                <i class="rotate__logo"></i>
+                <i class="rotate__icon"></i>
+                <div class="rotate__text">Please rotate your&nbsp;device for&nbsp;better experience</div>
+            </div>
+        </noindex>    <!--/UI -->
+            <!-- Projects -->
+        <div class="projects" style="height: 628px;">
+    
+            <!-- Templates -->
+           
+            <!--/Templates -->
+    
+            <!-- Menu -->
+            <div class="projects__menu">
+                <i class="projects__menu__icon"></i>
+                <span class="projects__menu__text">All Art &amp; Exhibition</span>
+            </div>
+            <!--/Menu -->
+    
+            <!-- Control -->
+            <div class="control">
+                <i class="control__icon" style="background-position: -180px -1650px;"></i>
+            </div>
+            <!--/Control -->
+    
+        <section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"></section><section class="project" tabindex="-1"><!-- Gallery -->
+                    <figure class="project__gallery" style="display: none;">
+                        <ul class="project__gallery__content">
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_full">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_2" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_full">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_2" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
                         </ul>
-                    </div>
-                    <span class="navTrigger">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                    </span>
-                </div>
-            </nav>    
-        </nav>
-        
-	 <header>
-            <div class="slider" id="slider">
-                <div style="background-image: url('/static/w1.jpg'); " id="ssli">
+                    </figure>
+                    <!--/Gallery -->
+                    <!-- Content -->
+                    <article class="project__content">
+                        <div class="project__about" style="display: none; opacity: 0; transform: translateX(-40px);">
+                            <h2 class="project__about__title">Pepsi MixItUp</h2>
+                            <div class="project__about__text">
+                                
+                                2016 MarCom Awards: Platinum | Exhibition design for Pepsi Prestige bottle and accessories for Salone del Mobile, Milan, Italy.
+                                
+                            </div>
+                        </div>
+                        
+                        <dl class="project__client" style="display: none; opacity: 0; transform: translateX(-20px);">
+                            
+                            
+                            <dt class="project__client__data">
+                                <a href="/search?q=PepsiCo">
+                                    PepsiCo
+                                    </a>
+                            </dt>
+                            
+                            <dd class="project__client__data">USA</dd>
+                            
+                            
+                            <dd class="project__client__data">2016</dd>
+                            
+                        </dl>
+                    </article>
+                    <!--/Content --></section><section class="project" tabindex="-1"><!-- Gallery -->
+                    <figure class="project__gallery" style="display: none;">
+                        <ul class="project__gallery__content">
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                        </ul>
+                    </figure>
+                    <!--/Gallery -->
+                    <!-- Content -->
+                    <article class="project__content">
+                        <div class="project__about" style="display: none; opacity: 0; transform: translateX(-40px);">
+                            <h2 class="project__about__title">Pepsi NSPIRE</h2>
+                            <div class="project__about__text">
+                                
+                                <span class="project__about__open">Show More Info</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <aside class="project__text">
+                            <div class="project__text__content" style="top: 280px;">
+                                <div class="project__text__content__inner text" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">2017 Graphis Annual: Merit | 2016 Golden A' Design Award | 2016 Good Design Australia Awards | 2016 Hermes Creative Awards: Gold | 2016 Platinum A' Design Award | 2016 Red Dot Award | 2016 Spark Design Awards: Finalist | 2015 A' Design Award: Platinum |  PepsiCo's global design team worked in collaboration with Karim Rashid to thoughtfully create PepsiCo NSPIRE, a new innovation kitchen on wheels and provide consumers with a dynamic and contemporary opportunity to engage with the company's brands.</div>
+                            <div class="iScrollVerticalScrollbar iScrollLoneScrollbar" style="overflow: hidden; pointer-events: none;"><div class="iScrollIndicator" style="transition-duration: 0ms; display: none; height: 8px; transform: translate(0px, -8px) translateZ(0px); transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);"></div></div></div>
+                        </aside><i class="project__text-overlay"></i>
+                        
+                        <dl class="project__client" style="display: none; opacity: 0; transform: translateX(-20px);">
+                            
+                            
+                            <dt class="project__client__data">
+                                <a href="/search?q=PepsiCo">
+                                    PepsiCo
+                                    </a>
+                            </dt>
+                            
+                            <dd class="project__client__data">USA</dd>
+                            
+                            
+                            <dd class="project__client__data">2015</dd>
+                            
+                        </dl>
+                    </article>
+                    <!--/Content --></section><section class="project" tabindex="-1"><!-- Gallery -->
+                    <figure class="project__gallery" style="display: none;">
+                        <ul class="project__gallery__content">
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_full">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_2" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                        </ul>
+                    </figure>
+                    <!--/Gallery -->
+                    <!-- Content -->
+                    <article class="project__content">
+                        <div class="project__about" style="display: none; opacity: 0; transform: translateX(-40px);">
+                            <h2 class="project__about__title">Revolutionary Glass Design</h2>
+                            <div class="project__about__text">
+                                
+                                World Champion Glass Ski Project, 
+                                
+                            </div>
+                        </div>
+                        
+                        <dl class="project__client" style="display: none; opacity: 0; transform: translateX(-20px);">
+                            
+                            
+                            <dt class="project__client__data">
+                                <a href="/search?q=Gioara">
+                                    Gioara
+                                    </a>
+                            </dt>
+                            
+                            <dd class="project__client__data">Italy</dd>
+                            
+                            
+                            <dd class="project__client__data">2015</dd>
+                            
+                        </dl>
+                    </article>
+                    <!--/Content --></section><section class="project" tabindex="-1"><!-- Gallery -->
+                    <figure class="project__gallery" style="display: none;">
+                        <ul class="project__gallery__content">
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_full">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_2" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_full">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_2" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                        </ul>
+                    </figure>
+                    <!--/Gallery -->
+                    <!-- Content -->
+                    <article class="project__content">
+                        <div class="project__about" style="display: none; opacity: 0; transform: translateX(-40px);">
+                            <h2 class="project__about__title">Serial Beauty</h2>
+                            <div class="project__about__text">
+                                
+                                Biennale Internationale Design Saint-Etienne, France
+                                
+                            </div>
+                        </div>
+                        
+                        <dl class="project__client" style="display: none; opacity: 0; transform: translateX(-20px);">
+                            
+                            
+                            <dt class="project__client__data">
+                                <a href="/search?q=Cite+du+design">
+                                    Cite du design
+                                    </a>
+                            </dt>
+                            
+                            <dd class="project__client__data">France</dd>
+                            
+                            
+                            <dd class="project__client__data">2015</dd>
+                            
+                        </dl>
+                    </article>
+                    <!--/Content --></section><section class="project" tabindex="-1"><!-- Gallery -->
+                    <figure class="project__gallery" style="display: none;">
+                        <ul class="project__gallery__content">
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_full">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_2" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                        </ul>
+                    </figure>
+                    <!--/Gallery -->
+                    <!-- Content -->
+                    <article class="project__content">
+                        <div class="project__about" style="display: block; opacity: 1; transform: translateX(0px);">
+                            <h2 class="project__about__title">Bounce Booth</h2>
+                            <div class="project__about__text">
+                                
+                                WantedDesign, NYC
+                                
+                            </div>
+                        </div>
+                        
+                        <dl class="project__client" style="display: block; opacity: 1; transform: translateX(0px);">
+                            
+                            
+                            <dt class="project__client__data">
+                                <a href="/search?q=Gufram">
+                                    Gufram
+                                    </a>
+                            </dt>
+                            
+                            <dd class="project__client__data">Italy</dd>
+                            
+                            
+                            <dd class="project__client__data">2015</dd>
+                            
+                        </dl>
+                    </article>
+                    <!--/Content --></section><section class="project" tabindex="-1"><!-- Gallery -->
+                    <figure class="project__gallery" style="display: none;">
+                        <ul class="project__gallery__content">
+                            
+                            <li class="project__gallery__column project__gallery__column_full">
+                                
+                                <div class="project__gallery__item project__gallery__item_full">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_2" style="height: 50vh;">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                        </ul>
+                    </figure>
+                    <!--/Gallery -->
+                    <!-- Content -->
+                    <article class="project__content">
+                        <div class="project__about" style="display: none; opacity: 0; transform: translateX(-40px);">
+                            <h2 class="project__about__title">Immagini dlo Vase</h2>
+                            <div class="project__about__text">
+                                
+                                
+                                
+                            </div>
+                        </div>
+                        
+                        <dl class="project__client" style="display: none; opacity: 0; transform: translateX(-20px);">
+                            
+                            
+                            <dt class="project__client__data">
+                                <a href="/search?q=Tam+Tam">
+                                    Tam Tam
+                                    </a>
+                            </dt>
+                            
+                            <dd class="project__client__data">Italy</dd>
+                            
+                            
+                            <dd class="project__client__data">2014</dd>
+                            
+                        </dl>
+                    </article>
+                    <!--/Content --></section><section class="project" tabindex="-1"><!-- Gallery -->
+                    <figure class="project__gallery">
+                        <ul class="project__gallery__content">
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static//static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static//static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static//static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static//static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static//static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static//static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static//static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static//static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static//static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                                <div class="project__gallery__item project__gallery__item_half">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static//static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_full">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static//static/w.jpg);"></i>
+                                    </span>
+                                    
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_2">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static//static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_full">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static//static/w.jpg);"></i>
+                                    </span>
+                                    
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_2">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static//static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li class="project__gallery__column project__gallery__column_half">
+                                
+                                <div class="project__gallery__item project__gallery__item_full">
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_1">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static//static/w.jpg);"></i>
+                                    </span>
+                                    
+                                    <span class="project__gallery__item__picture project__gallery__item__picture_2">
+                                        <i class="project__gallery__item__picture__bg" style="background-image: url(/static//static/w.jpg);"></i>
+                                    </span>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                        </ul>
+                    </figure>
+                    <!--/Gallery -->
+                    <!-- Content -->
+                    <article class="project__content">
+                        <div class="project__about" style="display: none; opacity: 0; transform: translateX(-40px);">
+                            <h2 class="project__about__title">Sparkle Krib</h2>
+                            <div class="project__about__text">
+                                
+                                <span class="project__about__open">Show More Info</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <aside class="project__text">
+                            <div class="project__text__content">
+                                <div class="project__text__content__inner text" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">2014 Spark Award: Finalist | LG Hausys HI-MACS allows me to create an amorphous solid-surface landscape that denotes a world with no boundaries. The surrounding interior of the LG Hausys exhibition becomes a state between liquid plastic and a solid material object. The results are organic forms that softly translate into and out of flat planar surfaces. The overall feeling creates a state of endlessness, a continual ephemeral experience. I designed the LG Hausys space to bring enjoyment, not encumbrances, and increase our level of engagement and of beauty. We can develop the inanimate world to be an extension of our emotions and our physical being. The LG Hausys exhibition encompasses all the needs of an open contemporary fluid and technological home. The holistic approach to the full space shows how our lives are elevated when we experience beauty, comfort, luxury, performance, smartness, technology and utility seamlessly together.
+    
+        Client: LG Hausys, Korea
+        Category: Exhibition
+        Facilities: Lounge, Bedroom, Kitchen, Dining Room, Bathroom, Press Area
+        Design period: Dec 2013 - Jan 2014
+        Construction Period: Jan 2014 - Apr 2014</div>
+                            <div class="iScrollVerticalScrollbar iScrollLoneScrollbar" style="overflow: hidden; pointer-events: none;"><div class="iScrollIndicator" style="transition-duration: 0ms; display: none; height: 8px; transform: translate(0px, -8px) translateZ(0px); transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);"></div></div></div>
+                        </aside><i class="project__text-overlay"></i>
+                        
+                        <dl class="project__client" style="display: none; opacity: 0; transform: translateX(-20px);">
+                            
+                            
+                            <dt class="project__client__data">
+                                <a href="/search?q=LG+Hausys">
+                                    LG Hausys
+                                    </a>
+                            </dt>
+                            
+                            <dd class="project__client__data">Korea</dd>
+                            
+                            
+                            <dd class="project__client__data">2014</dd>
+                            
+                        </dl>
+                    </article>
                     
+                    <ul class="projects__slideshow__content">
+                        
+                        <li class="projects__slideshow__item" style="background-image: url()"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url()"></li>
+                        
+                    </ul>
+                </div><div class="projects__slider" style="overflow: hidden;">
+                    <ul class="projects__slider__content" style="transform: translateZ(0px) translateX(768px); width: 1px;">
+                        
+                        <li class="projects__slider__item active" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                    </ul>
+                    <i class="projects__slider__control"></i>
+                    <i class="projects__slider__close"></i>
+                </div><div class="projects__slideshow">
+                    <ul class="projects__slideshow__content">
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                    </ul>
+                </div><div class="projects__slider" style="overflow: hidden;">
+                    <ul class="projects__slider__content" style="transform: translateZ(0px) translateX(768px); width: 3px;">
+                        
+                        <li class="projects__slider__item active" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                    </ul>
+                    <i class="projects__slider__control"></i>
+                    <i class="projects__slider__close"></i>
+                </div><div class="projects__slideshow">
+                    <ul class="projects__slideshow__content">
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                    </ul>
+                </div><div class="projects__slider" style="overflow: hidden;">
+                    <ul class="projects__slider__content" style="transform: translateZ(0px) translateX(768px); width: 1.5px;">
+                        
+                        <li class="projects__slider__item active" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                    </ul>
+                    <i class="projects__slider__control"></i>
+                    <i class="projects__slider__close"></i>
+                </div><div class="projects__slideshow">
+                    <ul class="projects__slideshow__content">
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                    </ul>
+                </div><div class="projects__slider" style="overflow: hidden;">
+                    <ul class="projects__slider__content" style="transform: translateZ(0px) translateX(768px); width: 2px;">
+                        
+                        <li class="projects__slider__item active" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                    </ul>
+                    <i class="projects__slider__control"></i>
+                    <i class="projects__slider__close"></i>
+                </div><div class="projects__slideshow">
+                    <ul class="projects__slideshow__content">
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                    </ul>
+                </div><div class="projects__slider" style="overflow: hidden; opacity: 1; display: block;">
+                    <ul class="projects__slider__content" style="transform: translateZ(0px) translateX(0px); width: 1080px;">
+                        
+                        <li class="projects__slider__item active" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                    </ul>
+                    <i class="projects__slider__control"></i>
+                    <i class="projects__slider__close"></i>
+                </div><div class="projects__slideshow">
+                    <ul class="projects__slideshow__content">
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                    </ul>
+                </div><div class="projects__slider" style="opacity: 0; display: none;">
+                    <ul class="projects__slider__content">
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                    </ul>
                     
-                  <p style="margin-top: 40%;">Let's tell your story...</p>
+                    <i class="projects__slider__close"></i>
+                </div><div class="projects__slideshow">
+                    <ul class="projects__slideshow__content">
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slideshow__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                    </ul>
+                </div><div class="projects__slider" style="display: none; opacity: 0; overflow: hidden;">
+                    <ul class="projects__slider__content" style="transform: translateZ(0px); width: 4680px;">
+                        
+                        <li class="projects__slider__item active" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                        <li class="projects__slider__item" style="background-image: url(/static//static/w.jpg)"></li>
+                        
+                    </ul>
+                    <i class="projects__slider__control"></i>
+                    <i class="projects__slider__close"></i>
+                </div></div>
+        <!--/Projects -->
+    
+        <script class="ui-help__template" type="text/x-handlebars-template">
+            <div class="ui-help">
+                <div class="ui-help__mouse">
+                    <i class="ui-help__mouse__wheel"></i>
                 </div>
-                <div style="background-image: url('/static/w2.jpg');" id="ssli">
-                  
-                  <p style="margin-top: 40%;">..In a cinematic way</p>
+                <div class="ui-help__keyboard">
+                    <i class="ui-help__keyboard__button ui-help__keyboard__button_left"></i>
+                    <i class="ui-help__keyboard__button ui-help__keyboard__button_right"></i>
+                    <i class="ui-help__keyboard__button ui-help__keyboard__button_up"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="-1 -1 9 7"><path stroke="black" stroke-opacity="0.2" stroke-width="1" fill="#FFF" fill-rule="evenodd" clip-rule="evenodd" d="M0 5l4-4.991 4 4.991Z"/></svg></i>
+                    <i class="ui-help__keyboard__button ui-help__keyboard__button_down"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="-1 -1 9 7"><path stroke="black" stroke-opacity="0.2" stroke-width="1" fill="#FFF" fill-rule="evenodd" clip-rule="evenodd" d="M8 1l-4 4.991-4-4.991Z" /></svg></i>
                 </div>
-                <div style="background-image: url('/static/w8.jpg');" id="ssli">
-                  
-                  <p style="margin-top: 40%;">You won't ever forget</p>
-                </div>
-                <div style="background-image: url('/static/w6.jpg');" id="ssli">
-                 
-                  <p style="margin-top: 40%;">And we will never disappoint....</p>
-                </div>
-                <div style="background-image: url('/static/w5.jpg');" id="ssli">
-                 
-                  <p style="margin-top: 40%;">...in God we trust</p>
-                </div>
-              </div>
-        </header>
-       
-        <script>
-                $(function () {
-                    $(document).scroll(function () {
-                        var $nav = $("#mainNavbar");
-                        $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
-                    });
-                });
-            </script>
+                
+            </div>
+        </script>
+    
         
             <div class="container" style="margin-top: 10px;">
                 <div class="main-heading-wrap">
@@ -356,8 +1143,7 @@ font-family: 'Source Serif Pro', serif;
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script>
             const $slider = $("#slider");
             $slider
@@ -385,41 +1171,6 @@ font-family: 'Source Serif Pro', serif;
                     $slider.slick('slickNext')
                 }
             }
-        </script>
-        <script>
-		
-	$('#myCarousel').carousel({
-	            interval: false
-	        });
-	
-	        //scroll slides on swipe for touch enabled devices
-	
-	        $("#myCarousel").on("touchstart", function(event){
-	
-	            var yClick = event.originalEvent.touches[0].pageY;
-	            $(this).one("touchmove", function(event){
-	
-	                var yMove = event.originalEvent.touches[0].pageY;
-	                if( Math.floor(yClick - yMove) > 1 ){
-	                    $(".carousel").carousel('next');
-	                }
-	                else if( Math.floor(yClick - yMove) < -1 ){
-	                    $(".carousel").carousel('prev');
-	                }
-	            });
-	            $(".carousel").on("touchend", function(){
-	                $(this).off("touchmove");
-	            });
-	        });
-		var swiper = new Swiper('.swiper-container', {
-		  direction: 'vertical',
-		  slidesPerView: 1,
-		  mousewheel: true,
-		  pagination: {
-		    el: '.swiper-pagination',
-		    clickable: true,
-		  },
-		});
         </script>
         <script>
             $(window).scroll(function() {
@@ -452,7 +1203,8 @@ font-family: 'Source Serif Pro', serif;
                 var sli = document.getElementById('ch')
                 sli.className = ran();
             }
+     
         </script>
     </body>
-    
+    <script src="/static/aj.js"></script>    
 </html>

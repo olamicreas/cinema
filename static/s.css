@@ -80,24 +80,24 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder {
 
 @font-face {
     font-family: 'Titling Gothic Skyline';
-    src: url('titling.eot');
-    src: url('titling.eot?#iefix') format('embedded-opentype'),url('titling.woff') format('woff'),url('titling.ttf') format('truetype'),url('titling.svg#titling') format('svg');
+    src: url('/static/titling.eot');
+    src: url('/static/titling.eot?#iefix') format('embedded-opentype'),url('/static/titling.woff') format('woff'),url('/static/titling.ttf') format('truetype'),url('/static/titling.svg#titling') format('svg');
     font-weight: 400;
     font-style: normal
 }
 
 @font-face {
     font-family: 'Neue Haas Grotesk';
-    src: url('haas.eot');
-    src: url('haas.eot?#iefix') format('embedded-opentype'),url('haas.woff') format('woff'),url('haas.ttf') format('truetype'),url('haas.svg#haas') format('svg');
+    src: url('/static/haas.eot');
+    src: url('/static/haas.eot?#iefix') format('embedded-opentype'),url('/static/haas.woff') format('woff'),url('/static/haas.ttf') format('truetype'),url('/static/haas.svg#haas') format('svg');
     font-weight: 400;
     font-style: normal
 }
 
 @font-face {
     font-family: 'Neue Haas Grotesk';
-    src: url('haas-bold.eot');
-    src: url('haas-bold.eot?#iefix') format('embedded-opentype'),url('haas-bold.woff') format('woff'),url('haas-bold.ttf') format('truetype'),url('haas-bold.svg#haas-bold') format('svg');
+    src: url('/static/haas-bold.eot');
+    src: url('/static/haas-bold.eot?#iefix') format('embedded-opentype'),url('/static/haas-bold.woff') format('woff'),url('/static/haas-bold.ttf') format('truetype'),url('/static/haas-bold.svg#haas-bold') format('svg');
     font-weight: 700;
     font-style: normal
 }
@@ -2424,7 +2424,7 @@ a,.link {
     top: 0;
     width: 52px;
     height: 100%;
-    background: url(next.png) no-repeat 50% 50%;
+    background: url(../images/project/next.png) no-repeat 50% 50%;
     background-size: 32px 24px;
     cursor: pointer
 }
@@ -5390,7 +5390,7 @@ a,.link {
 }
 
 .contact__office__control__icon_next {
-    background-image: url(next.png)
+    background-image: url(../images/projects/next.png)
 }
 
 .contact__office__control__icon_restart {

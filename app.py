@@ -38,6 +38,10 @@ mail = Mail(app)
 def home():
     return send_from_directory('static', 'v.html')
 
+@app.route('/wed')
+def wed():
+    return render_template('wedding-photo.html')
+
 @app.route('/about')
 def about():
     return render_template('about.html')

@@ -6,7 +6,7 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
         <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
-       
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- Stylesheet -->
         <link href="static/s.css" rel="stylesheet"/>
         <!-- JS -->
@@ -76,10 +76,8 @@
                     </div>
                 </div>
                 <div class="panel__title"></div>
-                <i class="panel__close">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M24 22.568l-1.433 1.432-10.567-10.568-10.568 10.568-1.432-1.432 10.568-10.568-10.568-10.568 1.432-1.432 10.568 10.567 10.567-10.567 1.433 1.432-10.568 10.568 10.568 10.568z"/>
-                    </svg>
+                <i class="panel__close" style="display: inline; opacity: 1;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M24 22.568l-1.433 1.432-10.567-10.568-10.568 10.568-1.432-1.432 10.568-10.568-10.568-10.568 1.432-1.432 10.568 10.567 10.567-10.567 1.433 1.432-10.568 10.568 10.568 10.568z"></path></svg></i>
+                    
                 </i>
             </div>
             <noindex>
@@ -149,7 +147,10 @@
 					{{/if}}
 					{{#if year}}
 					<dd class="project__client__data">{{{ year }}}</dd>
+
 					{{/if}}
+                    <p></p>
+                    <p><a href="pricing" style=" text-align: center; border-radius: 5px; padding: 5px;">click to book</a></p>
 				</dl>
 			</article>
 			<!--/Content -->
@@ -225,7 +226,7 @@
                             "client": {
                                 "country": "$2500",
                                 "title": "Music Videos",
-                                "url": "#"
+                                "url": "wed#music-vid"
                             },
                             "images": [{
                                 "width": "1492",
@@ -278,7 +279,7 @@
                             "client": {
                                 "country": "$150",
                                 "title": "Business Cards or Flyers",
-                                "url": "#"
+                                "url": "wed#biz-card"
                             },
                             "images": [{
                                 "width": "1638",
@@ -321,7 +322,7 @@
                             "client": {
                                 "country": "$850",
                                 "title": "Model Photos",
-                                "url": "#"
+                                "url": "wed#scrollspymodel"
                             },
                             "images": [{
                                 "width": "1920",
@@ -339,7 +340,7 @@
                             "client": {
                                 "country": "$500",
                                 "title": "Motion Graphics",
-                                "url": "#"
+                                "url": "wed#motion"
                             },
                             "images": [{
                                 "width": "1920",
@@ -422,7 +423,7 @@
                             "client": {
                                 "country": "$150",
                                 "title": "Poster",
-                                "url": "#"
+                                "url": "wed#poster"
                             },
                             "images": [{
                                 "width": "1920",
@@ -465,7 +466,7 @@
                             "client": {
                                 "country": "$850",
                                 "title": "Wedding Photos",
-                                "url": "#"
+                                "url": "wed#scrollspywedding"
                             },
                             "images": [{
                                 "width": "1271",
@@ -523,7 +524,7 @@
                             "client": {
                                 "country": "$850",
                                 "title": "Birthday Videos",
-                                "url": "#"
+                                "url": "wed#birthdays"
                             },
                             "images": [{
                                 "width": "1277",
@@ -568,7 +569,7 @@
                             "client": {
                                 "country": "$500",
                                 "title": "Video Editing",
-                                "url": "\/search?q=FORM+AT+WOOD"
+                                "url": "wed#vid-edit"
                             },
                             "images": [{
                                 "width": "1280",
@@ -698,7 +699,7 @@
                             "client": {
                                 "country": "$850",
                                 "title": "Model Photos",
-                                "url": "#"
+                                "url": "wed#scrollspymodel"
                             },
                             "images": [{
                                 "width": "1920",
@@ -716,7 +717,7 @@
                             "client": {
                                 "country": "$500",
                                 "title": "Motion Graphics",
-                                "url": "#"
+                                "url": "wed#motion"
                             },
                             "images": [{
                                 "width": "1920",
@@ -799,7 +800,7 @@
                             "client": {
                                 "country": "$150",
                                 "title": "Poster",
-                                "url": "#"
+                                "url": "wed#poster"
                             },
                             "images": [{
                                 "width": "1920",
@@ -842,7 +843,7 @@
                             "client": {
                                 "country": "$850",
                                 "title": "Wedding Photos",
-                                "url": "#"
+                                "url": "wed#scrollspywedding"
                             },
                             "images": [{
                                 "width": "1271",
@@ -900,7 +901,7 @@
                             "client": {
                                 "country": "$850",
                                 "title": "Birthday Videos",
-                                "url": "#"
+                                "url": "wed#birthdays"
                             },
                             "images": [{
                                 "width": "1277",
@@ -945,7 +946,7 @@
                             "client": {
                                 "country": "$500",
                                 "title": "Video Editing",
-                                "url": "\/search?q=FORM+AT+WOOD"
+                                "url": "wed#vid-edit"
                             },
                             "images": [{
                                 "width": "1280",
@@ -993,7 +994,7 @@
                             "client": {
                                 "country": "$850",
                                 "title": "Model Photos",
-                                "url": "\/search?q=Italica+Tiles"
+                                "url": "wed#scrollspymodel"
                             },
                             "images": [{
                                 "width": "1920",

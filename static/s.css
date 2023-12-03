@@ -147,7 +147,7 @@ a,.link {
 }
 
 .page_loading {
-    opacity: 0
+    opacity: 0.5;
 }
 
 .page_loading * {
@@ -201,7 +201,7 @@ a,.link {
 }
 
 .page_menu .ui-menu {
-    opacity: 0
+    opacity: 0.5
 }
 
 .ui-menu svg {
@@ -458,7 +458,7 @@ a,.link {
 }
 
 .ui-help__keyboard,.ui-help_keyboard .ui-help__mouse {
-    opacity: 0;
+    opacity: 0.5;
     -webkit-transition-delay: 0;
     transition-delay: 0
 }
@@ -1375,7 +1375,8 @@ a,.link {
     height: 24px;
     padding: 28px 28px 28px 8px;
     cursor: pointer;
-    display: none
+    display: none;
+    color: white;
 }
 
 @media (max-width: 820px) {
@@ -2424,7 +2425,7 @@ a,.link {
     top: 0;
     width: 52px;
     height: 100%;
-    background: url(../images/project/next.png) no-repeat 50% 50%;
+    background: url('/static/next.png') no-repeat 50% 50%;
     background-size: 32px 24px;
     cursor: pointer
 }
@@ -2436,7 +2437,7 @@ a,.link {
     top: 0;
     width: 52px;
     height: 52px;
-    background: url(../images/project/close.png) no-repeat 50% 50%;
+    background: url('/static/close.png') no-repeat 50% 50%;
     background-size: 26px 26px
 }
 
@@ -2795,7 +2796,7 @@ a,.link {
 
 .project__gallery__item {
     position: relative;
-    cursor: url(../images/project/zoom.png) 15 15,pointer
+    cursor: url('/static/zoom.png') 15 15,pointer
 }
 
 .project__gallery__item_full {

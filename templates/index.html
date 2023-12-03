@@ -6,7 +6,8 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
         <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <!-- Stylesheet -->
         <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css"/>
         <!-- JS -->
@@ -21,9 +22,7 @@
             <!-- UI -->
             <a class="ui-logo " href="/"></a>
             <span class="ui-menu">
-                <svg xmlns="http://www.static/w3.org/2000/svg" width="80" height="40" viewBox="0 0 80 40">
-                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M0 40v-40h80v40h-80zm31.014-24.986h-3.587l-1.315 4.803c-.18.691-.599 2.501-.599 2.501h-.029s-.419-1.81-.613-2.501l-1.3-4.803h-3.559v10.972h2.377v-5.509c0-.445-.045-2.21-.045-2.21h.03s.374 1.657.493 2.057l1.524 5.662h2.183l1.54-5.678c.119-.399.493-2.041.493-2.041h.029s-.044 1.75-.044 2.194v5.524h2.421v-10.971zm8.984 8.672h-5.408v-2.349h4.562v-2.118h-4.562v-1.964h5.321v-2.241h-7.901v10.972h7.988v-2.3zm10.014-8.672h-2.548v5.203c0 .383.029 1.703.029 1.703h-.029l-.722-1.396-3.122-5.509h-2.621v10.972h2.548v-5.11c0-.384-.029-1.795-.029-1.795h.029s.574 1.182.751 1.473l3.093 5.432h2.621v-10.973zm9.989 0h-2.661v7.029c0 1.057-.586 1.811-1.819 1.811-1.308 0-1.849-.709-1.849-1.765v-7.075h-2.661v6.984c0 2.52 1.504 3.998 4.51 3.998 2.992 0 4.48-1.509 4.48-3.998v-6.984z"/>
-                </svg>
+                <i class="fa-solid fa-xmark"></i>
             </span>
             <nav class="menu">
                 <i class="menu__close">
@@ -75,11 +74,7 @@
                     </div>
                 </div>
                 <div class="panel__title"></div>
-                <i class="panel__close">
-                    <svg xmlns="http://www.static/w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M24 22.568l-1.433 1.432-10.567-10.568-10.568 10.568-1.432-1.432 10.568-10.568-10.568-10.568 1.432-1.432 10.568 10.567 10.567-10.567 1.433 1.432-10.568 10.568 10.568 10.568z"/>
-                    </svg>
-                </i>
+                <i class="panel__close a-solid fa-xmark" style="color: white;">XX</i>
             </div>
             <noindex>
                 <div class="rotate">
@@ -138,7 +133,7 @@
 					
 					
 					<dt class="project__client__data">
-						<a href="">
+						<a href="" id="red">
 							
 							</a>
 					</dt>
@@ -218,13 +213,13 @@
                             "name": "1444",
                             
                             "url": "/project_1444",
-                            "title": "Bench for 196 people",
+                            "title": "Motion Pictures",
                             "thumb": "\/projects\/thumb\/1444s1.jpg",
                             "year": "2023",
                             "text": "",
                             "client": {
-                                "country": "South Korea",
-                                "title": "Suncheonman International Garden Expo",
+                                "country": "UNited state",
+                                "title": "Music Videos",
                                 "url": "\/search?q=Suncheonman+International+Garden+Expo"
                             },
                             "images": [{
@@ -62304,6 +62299,7 @@
                         }]
                     }
                 };
+                console.log(categories)
             </script>
             <!--/Data -->
         </div>
